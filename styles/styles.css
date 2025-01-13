@@ -1,0 +1,323 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-size: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+  background-color: #f2f2f2;
+}
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+}
+.navigation-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+}
+.likes-number {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+  background-color: #7DB54F;
+}
+.navigation-button {
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background-color: #756157;
+  text-transform: uppercase;
+}
+.hero {
+  background-image: url("../images/divider.svg"), url("../images/background-hero.jpg");
+  background-size: 100% auto, cover;
+  background-repeat: no-repeat;
+  background-position: left bottom, left top;
+  background-color: #d19cdb;
+}
+.advantages {
+background-color: #ffffff;
+}
+.advantages-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.advantages-reasons {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+  text-align: center;
+}
+.advantages-item {
+  background-color: #82B3D3;
+}
+.advantages-light {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+.advantages-medium {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+.advantages-subtitle {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.advantages-subtitle-light {
+  color: #ffffff;
+}
+.advantages-text {
+  color: #333333;
+  text-align: center;
+}
+.advantages-text-light {
+  color: #ffffff;
+}
+.services {
+  background-color: #ffffff;
+}
+.services-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.services-description {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+  text-align: center;
+}
+.services-item:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+.services-subtitle {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.services-text {
+  text-align: center;
+  color: #333333;
+}
+.search {
+  background-color: #ffffff;
+}
+.search h2 {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.search p {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+  text-align: center;
+}
+.button-all {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+.newsletter {
+  background-image: url("../images/newsletter-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #d19cdb;
+}
+.newsletter h2 {
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.newsletter p {
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+  text-align: center;
+}
+.field {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+}
+.newsletter-button {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #82B3D3;
+}
+.contact-phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+  text-decoration: none;
+}
+.htmlacademy-link {
+  background-image: url("../images/logo_htmlacademy.svg");
+  background-repeat: no-repeat;
+}
+.catalog-filter {
+  background-image: url("../images/background-inner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  background-color: #d19cdb;
+}
+.catalog-title {
+  font-size: 60px;
+  line-height: 78px;
+}
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.catalog-filter-item {
+  font-size: 18px;
+  line-height: 23px;
+}
+.button-submit {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  background-color: #82B3D3;
+}
+.button-reset {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  background-color: transparent;
+}
+.catalog-products {
+  background-color: #ffffff;
+}
+.catalog-products h2 {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.select-control {
+  font-family: inherit;
+  color: #333333;
+  background-color: #ffffff;
+}
+.card-title-link {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  text-decoration: none;
+}
+.card-description {
+  color: #333333;
+}
+.card-price {
+  color: #333333;
+}
+.button-more {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #756157;
+}
+.card-favourite {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #82B3D3;
+}
+.card-favourite-option {
+  background-color: #7DB54F;
+}
+.card-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #333333;
+  background-color: #F2F2F2;
+}
+.pagination-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #82B3D3;
+  text-decoration: none;
+}
+.pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+.newsletter-inner {
+  background-color: #ffffff;
+}
+.newsletter-inner h2 {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.newsletter-inner p {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+  text-align: center;
+}
