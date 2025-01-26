@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+    <div class="page-container">
     <header class="page-header" data-test="header">
       <nav class="navigation">
         <a class="logo-link" href="index.html">
@@ -41,8 +42,8 @@
       </nav>
     </header>
     <main class="main-inner" data-test="main">
-
       <section class="catalog-filter" data-test="filter">
+        <div class="catalog-container">
         <h1 class="catalog-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
@@ -54,9 +55,9 @@
             <a class="breadcrumbs-link">Гостиницы</a>
           </li>
         </ul>
-        <h2 class="visually-hidden">Список фильтров для поиска жилья</h2>
+        <h2 class="visually-hidden" hidden>Список фильтров для поиска жилья</h2>
         <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group group-1">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
@@ -79,7 +80,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group group-2">
           <legend class="catalog-filter-title">Тип жилья:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
@@ -102,33 +103,41 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="catalog-filter-group">
+        <fieldset class="catalog-filter-group group-3">
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-          <label class="visually-hidden" for="min-price">От</label>
-          <input class="field" placeholder="0" type="number" name="min-price" id="min-price">
-          <label class="visually-hidden" for="max-price">До</label>
-          <input class="field" placeholder="9000" type="number" name="max-price" id="max-price">
+          <div class="price-inputs">
+            <label class="visually-hidden" hidden for="min-price">От</label>
+            <input class="field price-field" placeholder="0" type="number" name="min-price" id="min-price">
+            <label class="visually-hidden" hidden for="max-price">До</label>
+            <input class="field price-field" placeholder="9000" type="number" name="max-price" id="max-price">
+          </div>
+          <input class="price-range" type="range" min="0" max="9000" step="1" value="7000">
         </fieldset>
+        <div class="filter-buttons">
           <button class="button-submit" type="submit">Применить</button>
           <button class="button-reset" type="reset">Сбросить</button>
+        </div>
         </form>
+      </div>
       </section>
       <section class="catalog-products" data-test="catalog">
-      <div>
-        <h2>Найдено гостиниц: 38</h2>
-        <select class="select-control" aria-label="Сортировка">
-          <option value="cheap">Сначала дешевые</option>
-          <option value="expensive">Сначала дорогие</option>
-        </select>
-        <a class="button button-selected" href="#">
-          <span class="visually-hidden">Показать карточки</span>
-        </a>
-        <a class="button" href="#">
-          <span class="visually-hidden">Показать по одному</span>
-        </a>
-        <a class="button" href="#">
-          <span class="visually-hidden">Показать список</span>
-        </a>
+        <div class="select-container">
+          <h2>Найдено гостиниц: 38</h2>
+          <select class="select-control" aria-label="Сортировка">
+            <option value="cheap">Сначала дешевые</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
+          <div class="view-buttons">
+            <a class="button button-selected" href="#">
+              <span class="visually-hidden" hidden>Показать карточки</span>
+            </a>
+            <a class="button" href="#">
+              <span class="visually-hidden" hidden>Показать по одному</span>
+            </a>
+            <a class="button" href="#">
+              <span class="visually-hidden" hidden>Показать список</span>
+            </a>
+          </div>
         </div>
         <ul class="catalog-card-list">
           <li class="catalog-card-item">
@@ -157,7 +166,7 @@
             <p class="card-description">Гостиница</p>
             <p class="card-price">От 5000 ₽</p>
             <a class="button button-more" href="#">Подробнее</a>
-            <button class="card-favourite card-favourite-option">В избранное</button>
+            <button class="card-favourite card-favourite-option">В избранном</button>
             <p class="stars four-stars">
               <span class="visually-hidden">Отель 4 звезды</span>
             </p>
@@ -197,8 +206,8 @@
           </li>
         </ul>
         <ul class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-link pagination-current" href="#">1</a>
+          <li class="pagination-item pagination-current">
+            <a class="pagination-link current-link" href="#">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -209,8 +218,8 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">4</a>
           </li>
-          <li class="pagination-item">
-            <span class="pagination-more">...</span>
+          <li class="pagination-item pagination-more">
+            <span>...</span>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
@@ -221,35 +230,36 @@
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="newsletter-email">Ваш email</label>
+          <label class="visually-hidden" for="newsletter-email" hidden>Ваш email</label>
           <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email">
           <button class="button newsletter-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
     <footer class="page-footer" data-test="footer">
-      <h2 class="visually-hidden">Контакты</h2>
+      <h2 class="visually-hidden" hidden>Контакты</h2>
       <ul class="social-list">
         <li class="social-item">
           <a class="button" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Вконтакте</span>
+            <span class="visually-hidden" hidden>Вконтакте</span>
           </a>
         </li>
         <li class="social-item">
           <a class="button" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Телеграм</span>
+            <span class="visually-hidden" hidden>Телеграм</span>
           </a>
         </li>
         <li class="social-item">
           <a class="button" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Ютуб</span>
+            <span class="visually-hidden" hidden>Ютуб</span>
           </a>
         </li>
       </ul>
       <a class="contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-        <span class="visually-hidden">Логотип HTML академии</span>
+        <span class="visually-hidden" hidden>Логотип HTML академии</span>
       </a>
     </footer>
+  </div>
   </body>
 </html>
