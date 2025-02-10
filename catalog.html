@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <div class="page-container">
     <header class="page-header" data-test="header">
       <nav class="navigation">
         <a class="logo-link" href="index.html">
@@ -55,7 +54,7 @@
             <a class="breadcrumbs-link">Гостиницы</a>
           </li>
         </ul>
-        <h2 class="visually-hidden" hidden>Список фильтров для поиска жилья</h2>
+        <h2 class="visually-hidden">Список фильтров для поиска жилья</h2>
         <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group group-1">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -106,9 +105,9 @@
         <fieldset class="catalog-filter-group group-3">
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
           <div class="price-inputs">
-            <label class="visually-hidden" hidden for="min-price">От</label>
+            <label class="visually-hidden" for="min-price">От</label>
             <input class="field price-field" placeholder="0" type="number" name="min-price" id="min-price">
-            <label class="visually-hidden" hidden for="max-price">До</label>
+            <label class="visually-hidden" for="max-price">До</label>
             <input class="field price-field" placeholder="9000" type="number" name="max-price" id="max-price">
           </div>
           <input class="price-range" type="range" min="0" max="9000" step="1" value="7000">
@@ -129,13 +128,13 @@
           </select>
           <div class="view-buttons">
             <a class="button button-selected" href="#">
-              <span class="visually-hidden" hidden>Показать карточки</span>
+              <span class="visually-hidden">Показать карточки</span>
             </a>
             <a class="button" href="#">
-              <span class="visually-hidden" hidden>Показать по одному</span>
+              <span class="visually-hidden">Показать по одному</span>
             </a>
             <a class="button" href="#">
-              <span class="visually-hidden" hidden>Показать список</span>
+              <span class="visually-hidden">Показать список</span>
             </a>
           </div>
         </div>
@@ -206,8 +205,8 @@
           </li>
         </ul>
         <ul class="pagination">
-          <li class="pagination-item pagination-current">
-            <a class="pagination-link current-link" href="#">1</a>
+          <li class="pagination-item">
+            <a class="pagination-link pagination-current" href="#">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -237,29 +236,28 @@
       </section>
     </main>
     <footer class="page-footer" data-test="footer">
-      <h2 class="visually-hidden" hidden>Контакты</h2>
+      <h2 class="visually-hidden">Контакты</h2>
       <ul class="social-list">
         <li class="social-item">
           <a class="button" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden" hidden>Вконтакте</span>
+            <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="social-item">
           <a class="button" href="https://t.me/htmlacademy">
-            <span class="visually-hidden" hidden>Телеграм</span>
+            <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
         <li class="social-item">
           <a class="button" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden" hidden>Ютуб</span>
+            <span class="visually-hidden">Ютуб</span>
           </a>
         </li>
       </ul>
       <a class="contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-        <span class="visually-hidden" hidden>Логотип HTML академии</span>
+        <span class="visually-hidden">Логотип HTML академии</span>
       </a>
     </footer>
-  </div>
   </body>
 </html>

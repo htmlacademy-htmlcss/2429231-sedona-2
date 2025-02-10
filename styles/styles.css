@@ -13,25 +13,35 @@
   font-display: swap;
 }
 html {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f2f2f2;
   height: 100%;
 }
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
   font-family: "PT Sans", sans-serif;
+  width: 1200px;
+  margin: 0 auto;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   font-style: normal;
-  color: #000000;
-  background-color: #f2f2f2;
-}
-.page-container {
-  margin: 0 auto;
-  width: 1200px;
   background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .page-header {
   color: #000000;
@@ -46,22 +56,31 @@ body {
   margin-right: 30px;
 }
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 460px;
-  margin-right: auto;
-}
-.navigation-user {
-  max-width: 320px;
 }
 .navigation-link {
+  display: block;
+  padding: 20px 16px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
   text-align: center;
   text-decoration: none;
+}
+.navigation-user {
+  max-width: 320px;
+  margin-left: auto;
+}
+.navigation-user .navigation-link {
+  min-width: 20px;
+  min-height: 20px;
 }
 .likes-number {
   font-weight: 400;
@@ -71,6 +90,7 @@ body {
   background-color: #7DB54F;
 }
 .navigation-button {
+  padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
@@ -81,6 +101,8 @@ body {
   flex-grow: 1;
 }
 .hero {
+  padding-top: 51px;
+  padding-bottom: 82px;
   background-image: url("../images/divider.svg"), url("../images/background-hero.jpg");
   background-size: 100% auto, cover;
   background-repeat: no-repeat;
@@ -95,6 +117,8 @@ body {
 .advantages-title {
   width: 620px;
   margin: 0 auto;
+  margin-top: 69px;
+  margin-bottom: 25px;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -103,6 +127,7 @@ body {
 .advantages-reasons {
   width: 651px;
   margin: 0 auto;
+  margin-bottom: 90px;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -112,11 +137,23 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 64px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 .advantages-item {
+  width: 400px;
   background-color: #82B3D3;
+}
+.advantages-item div {
+  width: 400px;
+}
+.big-item {
+  display: flex;
+  width: 1200px;
+}
+.big-item:nth-last-child(1) {
+  flex-direction: row-reverse;
 }
 .advantages-light {
   background-color: rgba(131, 179, 211, 0.12);
@@ -125,24 +162,42 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 .advantages-subtitle {
+  width: 175px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 112.5px;
+  margin-bottom: 62px;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
 }
+.big-item .advantages-subtitle {
+  margin-top: 102px;
+}
 .advantages-subtitle-light {
   color: #ffffff;
 }
 .advantages-text {
+  width: 230px;
+  margin: 0 auto;
+  margin-bottom: 112.5px;
   color: #333333;
   text-align: center;
+}
+.big-item .advantages-text {
+  margin-bottom: 102px;
 }
 .advantages-text-light {
   color: #ffffff;
 }
+.advantages-image {
+  display: block;
+}
 .services-title {
   width: 505px;
   margin: 0 auto;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -151,6 +206,7 @@ body {
 .services-description {
   width: 490px;
   margin: 0 auto;
+  margin-bottom: 64px;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -158,10 +214,11 @@ body {
 }
 .services-list {
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  margin-bottom: 96px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .services-item {
   width: 400px;
@@ -172,18 +229,22 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 .services-subtitle {
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
 }
 .services-text {
+  margin: 0;
   text-align: center;
   color: #333333;
 }
 .search h2 {
   width: 297px;
   margin: 0 auto;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -192,6 +253,7 @@ body {
 .search p {
   width: 592px;
   margin: 0 auto;
+  margin-bottom: 54px;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -201,6 +263,9 @@ body {
   display: block;
   width: 376px;
   margin: 0 auto;
+  margin-bottom: 96px;
+  padding: 8px 50px;
+  box-sizing: border-box;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -211,6 +276,8 @@ body {
   text-align: center;
 }
 .newsletter {
+  padding-top: 96px;
+  padding-bottom: 104px;
   background-image: url("../images/newsletter-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -219,6 +286,7 @@ body {
 .newsletter h2 {
   width: 404px;
   margin: 0 auto;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   color: #ffffff;
@@ -228,6 +296,7 @@ body {
 .newsletter p {
   width: 475px;
   margin: 0 auto;
+  margin-bottom: 54px;
   font-size: 22px;
   line-height: 26px;
   color: #ffffff;
@@ -248,7 +317,7 @@ body {
 .newsletter-button {
   width: 232px;
   border: none;
-  padding: 0;
+  padding: 8px 50px;
   font-family: inherit;
   font-size: 20px;
   line-height: 36px;
@@ -263,33 +332,38 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 1060px;
-  height: 50px;
   margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 .social-list {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 142px;
+}
+.social-item {
+  width: 47px;
   height: 40px;
 }
 .contact-phone {
   width: 331px;
-  height: 40px;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
   text-decoration: none;
 }
 .htmlacademy-link {
-  width: 115px;
-  height: 33px;
-  /* margin-left: auto; */
+  min-width: 115px;
+  min-height: 33px;
   background-image: url("../images/logo_htmlacademy.svg");
   background-repeat: no-repeat;
 }
 .catalog-filter {
+  padding-top: 35px;
+  padding-bottom: 70px;
   background-image: url("../images/background-inner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -303,6 +377,7 @@ body {
 .catalog-title {
   max-width: 495px;
   margin: 0;
+  margin-bottom: 8px;
   margin-right: auto;
   font-size: 60px;
   line-height: 78px;
@@ -311,7 +386,17 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  margin-bottom: 40px;
   list-style-type: none;
+  width: 114px;
+}
+.breadcrumbs-item {
+  min-width: 13px;
+  margin-right: 10px;
+}
+.breadcrumbs-item:nth-child(2) {
+  margin-right: 0;
+  margin-left: auto;
 }
 .breadcrumbs-link {
   font-size: 16px;
@@ -321,7 +406,6 @@ body {
 }
 .catalog-filter-form {
   display: flex;
-  height: 160px;
   align-items: center;
 }
 .group-1 {
@@ -330,11 +414,26 @@ body {
   padding: 0;
   margin-right: 70px;
   border: none;
-
+}
+.catalog-filter-title {
+  padding: 0;
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
 }
 .catalog-filter-list {
   list-style-type: none;
+  margin: 0;
   padding: 0;
+}
+.catalog-filter-item {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 23px;
+}
+.catalog-filter-item:nth-last-child(1) {
+  margin-bottom: 0;
 }
 .group-2 {
   max-width: 151px;
@@ -350,10 +449,14 @@ body {
   margin-right: 70px;
   border: none;
 }
+.group-3 .catalog-filter-title {
+  margin-bottom: 32px;
+}
 .price-inputs {
   display: flex;
   gap: 2px;
   width: 288px;
+  margin-bottom: 36px;
 }
 .price-field {
   width: 143px;
@@ -362,16 +465,6 @@ body {
 .price-range {
   width: 287px;
   margin: 0;
-}
-.catalog-filter-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  padding: 0;
-}
-.catalog-filter-item {
-  font-size: 18px;
-  line-height: 23px;
 }
 .filter-buttons {
   display: flex;
@@ -387,6 +480,8 @@ body {
   text-align: center;
   color: #ffffff;
   background-color: #82B3D3;
+  margin-bottom: 32px;
+  padding: 8px 50px;
 }
 .button-reset {
   font-family: inherit;
@@ -397,14 +492,19 @@ body {
   text-align: center;
   color: #ffffff;
   background-color: transparent;
+  padding: 8px 57.5px;
 }
 .select-container {
   display: flex;
   width: 1060px;
   margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 .catalog-products h2 {
+  align-self: center;
   width: 338px;
+  margin: 0;
   margin-right: 200px;
   font-size: 30px;
   line-height: 36px;
@@ -422,18 +522,19 @@ body {
   width: 160px;
   justify-content: space-between;
 }
+.view-buttons .button {
+  width: 48px;
+  height: 48px;
+}
 .catalog-card-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   width: 1060px;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
+  margin-bottom: 80px;
 }
 .catalog-card-item {
   width: 340px;
-  /* margin-right: 20px; */
 }
 .card-title-link {
   font-weight: 700;
@@ -485,30 +586,40 @@ body {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
+  margin-bottom: 156px;
 }
 .pagination-item {
-  width: 60px;
   margin-right: 8px;
-  text-align: center;
-  background-color: #82B3D3;
 }
 .pagination-item:last-child {
   margin: 0;
 }
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 11.36px;
+  width: 60px;
+  height: 60px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   color: #ffffff;
+  background-color: #82B3D3;
   text-decoration: none;
 }
 .pagination-current {
+  color: #000000;
   background-color: #F2F2F2;
 }
-.current-link {
-  color: #000000;
-}
+
 .pagination-more {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 16.36px;
+  width: 60px;
+  height: 60px;
   background-color: #ffffff;
 }
 .newsletter-inner {
@@ -519,6 +630,7 @@ body {
 .newsletter-inner h2 {
   width: 404px;
   margin: 0 auto;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -527,6 +639,7 @@ body {
 .newsletter-inner p {
   width: 475px;
   margin: 0 auto;
+  margin-bottom: 54px;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
