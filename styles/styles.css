@@ -48,12 +48,12 @@ body {
 }
 .navigation {
   display: flex;
+  column-gap: 30px;
   width: 1060px;
   margin: 0 auto;
 }
 .logo-link  {
   width: 138px;
-  margin-right: 30px;
 }
 .navigation-list {
   display: flex;
@@ -75,6 +75,7 @@ body {
   text-decoration: none;
 }
 .navigation-user {
+  justify-content: flex-end;
   max-width: 320px;
   margin-left: auto;
 }
@@ -134,26 +135,21 @@ body {
   text-align: center;
 }
 .advantages-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   padding: 0;
   margin-bottom: 64px;
-  display: flex;
-  flex-wrap: wrap;
 }
 .advantages-item {
-  width: 400px;
-  background-color: #82B3D3;
-}
-.advantages-item div {
-  width: 400px;
-}
-.big-item {
   display: flex;
-  width: 1200px;
-}
-.big-item:nth-last-child(1) {
-  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 400px;
+  box-sizing: border-box;
+  background-color: #82B3D3;
+  padding: 113px 85px;
 }
 .advantages-light {
   background-color: rgba(131, 179, 211, 0.12);
@@ -161,38 +157,41 @@ body {
 .advantages-medium {
   background-color: rgba(131, 179, 211, 0.2);
 }
+.big-item {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  padding: 0;
+}
+.big-item:nth-last-child(1) {
+  flex-direction: row-reverse;
+}
+.advantages-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 400px;
+  color: #ffffff;
+  padding: 102px 85px;
+}
 .advantages-subtitle {
   width: 175px;
   margin: 0 auto;
   padding: 0;
-  margin-top: 112.5px;
   margin-bottom: 62px;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
 }
-.big-item .advantages-subtitle {
-  margin-top: 102px;
-}
-.advantages-subtitle-light {
-  color: #ffffff;
-}
 .advantages-text {
   width: 230px;
-  margin: 0 auto;
-  margin-bottom: 112.5px;
+  margin: 0;
   color: #333333;
   text-align: center;
 }
-.big-item .advantages-text {
-  margin-bottom: 102px;
-}
 .advantages-text-light {
   color: #ffffff;
-}
-.advantages-image {
-  display: block;
 }
 .services-title {
   width: 505px;
@@ -213,22 +212,23 @@ body {
   text-align: center;
 }
 .services-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 96px;
-  display: flex;
-  flex-wrap: wrap;
 }
 .services-item {
-  width: 400px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   padding: 81px 85px;
 }
 .services-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.12);
 }
 .services-subtitle {
+  width: 230px;
   margin: 0;
   margin-bottom: 30px;
   font-size: 24px;
@@ -237,9 +237,13 @@ body {
   text-transform: uppercase;
 }
 .services-text {
+  width: 230px;
   margin: 0;
   text-align: center;
   color: #333333;
+}
+.search {
+  padding: 96px 304px;
 }
 .search h2 {
   width: 297px;
@@ -261,11 +265,10 @@ body {
 }
 .button-all {
   display: block;
+  box-sizing: border-box;
   width: 376px;
   margin: 0 auto;
-  margin-bottom: 96px;
   padding: 8px 50px;
-  box-sizing: border-box;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -331,10 +334,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1060px;
-  margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  padding: 40px 70px 30px;
 }
 .social-list {
   display: flex;
@@ -496,10 +496,7 @@ body {
 }
 .select-container {
   display: flex;
-  width: 1060px;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  padding: 50px 70px 40px;
 }
 .catalog-products h2 {
   align-self: center;
@@ -520,7 +517,7 @@ body {
 .view-buttons {
   display: flex;
   width: 160px;
-  justify-content: space-between;
+  gap: 8px;
 }
 .view-buttons .button {
   width: 48px;
@@ -581,26 +578,21 @@ body {
 }
 .pagination {
   display: flex;
-
-  width: 1060px;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 400px;
   list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-  margin-bottom: 156px;
-}
-.pagination-item {
-  margin-right: 8px;
-}
-.pagination-item:last-child {
   margin: 0;
+  padding: 0;
+  padding-left: 70px;
+  padding-bottom: 60px;
 }
 .pagination-link {
   display: block;
   box-sizing: border-box;
   text-align: center;
-  padding-top: 11.36px;
-  width: 60px;
-  height: 60px;
+  padding: 12px 14px;
+  min-width: 60px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -612,19 +604,17 @@ body {
   color: #000000;
   background-color: #F2F2F2;
 }
-
 .pagination-more {
   display: block;
   box-sizing: border-box;
   text-align: center;
-  padding-top: 16.36px;
+  padding: 16px 22px;
   width: 60px;
-  height: 60px;
   background-color: #ffffff;
 }
 .newsletter-inner {
   width: 684px;
-  margin: 0 auto;
+  padding: 96px 258px 104px;
   background-color: #ffffff;
 }
 .newsletter-inner h2 {
