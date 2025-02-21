@@ -55,6 +55,10 @@ body {
 .logo-link  {
   width: 138px;
 }
+.logo-image {
+  display: block;
+  position: absolute;
+}
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
@@ -333,7 +337,7 @@ body {
 .page-footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   padding: 40px 70px 30px;
 }
 .social-list {
@@ -342,6 +346,8 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 142px;
 }
 .social-item {
@@ -349,6 +355,9 @@ body {
   height: 40px;
 }
 .contact-phone {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 331px;
   font-size: 40px;
   line-height: 40px;
@@ -356,6 +365,7 @@ body {
   text-decoration: none;
 }
 .htmlacademy-link {
+  align-self: center;
   min-width: 115px;
   min-height: 33px;
   background-image: url("../images/logo_htmlacademy.svg");
@@ -406,11 +416,11 @@ body {
 }
 .catalog-filter-form {
   display: flex;
-  align-items: center;
 }
 .group-1 {
-  max-width: 151px;
+  min-width: 150px;
   margin: 0;
+  margin-bottom: 3px;
   padding: 0;
   margin-right: 70px;
   border: none;
@@ -436,8 +446,9 @@ body {
   margin-bottom: 0;
 }
 .group-2 {
-  max-width: 151px;
+  min-width: 150px;
   margin: 0;
+  margin-bottom: 3px;
   padding: 0;
   margin-right: auto;
   border: none;
@@ -456,6 +467,7 @@ body {
   display: flex;
   gap: 2px;
   width: 288px;
+  height: 48px;
   margin-bottom: 36px;
 }
 .price-field {
@@ -469,6 +481,7 @@ body {
 .filter-buttons {
   display: flex;
   flex-direction: column;
+  margin-top: auto;
   width: 191px;
 }
 .button-submit {
@@ -524,6 +537,9 @@ body {
   height: 48px;
 }
 .catalog-card-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 340px);
   width: 1060px;
   list-style-type: none;
   margin: 0 auto;
@@ -531,22 +547,42 @@ body {
   margin-bottom: 80px;
 }
 .catalog-card-item {
-  width: 340px;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 1fr;
+  gap: 16px 20px;
+  padding: 20px;
+}
+.card-link {
+  grid-column: 1/-1;
+}
+.card-image {
+  display: block;
+  object-fit: contain;
 }
 .card-title-link {
+  grid-column: 1/-1;
+  text-decoration: none;
+}
+.card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #000000;
-  text-decoration: none;
+  margin: 0;
 }
 .card-description {
   color: #333333;
+  margin: 0;
 }
 .card-price {
   color: #333333;
+  margin: 0;
+  justify-self: end;
 }
 .button-more {
+  display: block;
+  padding: 8px 26px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -557,11 +593,13 @@ body {
   background-color: #756157;
 }
 .card-favourite {
+  /* padding: 8px 20px; */
+  border: 0;
+  border-radius: 0;
+  appearance: none;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #82B3D3;
@@ -570,6 +608,8 @@ body {
   background-color: #7DB54F;
 }
 .card-rating {
+  margin: 0;
+  padding: 9px 22px 8px 23px;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
