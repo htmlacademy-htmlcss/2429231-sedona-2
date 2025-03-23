@@ -21,7 +21,6 @@
           <li class="navigation-item">
             <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
           </li>
-
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
@@ -36,7 +35,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="button navigation-button " href="catalog.html">Хочу сюда</a>
+            <a class="button navigation-button " href="#">Хочу сюда</a>
           </li>
         </ul>
       </nav>
@@ -84,7 +83,7 @@
             </ul>
           </fieldset>
           <fieldset class="catalog-filter-group group-2">
-          <legend class="catalog-filter-title">Тип жилья:</legend>
+          <legend class="catalog-filter-title">Тип Жилья:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="control">
@@ -111,13 +110,26 @@
         </fieldset>
         <fieldset class="catalog-filter-group group-3">
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-          <div class="price-inputs">
-            <label class="visually-hidden" for="min-price">От</label>
-            <input class="field price-field" placeholder="0" type="number" name="min-price" id="min-price">
-            <label class="visually-hidden" for="max-price">До</label>
-            <input class="field price-field" placeholder="9000" type="number" name="max-price" id="max-price">
+          <div class="range-wrapper-inputs">
+            <label class="catalog-filter-label">
+              <span class="filter-label-text">от</span>
+              <input class="field range-input min-price" type="number" value="0" name="min-price">
+            </label>
+            <label class="catalog-filter-label">
+              <span class="filter-label-text">до</span>
+              <input class=" field range-input max-price" type="number" value="9000" name="max-price">
+            </label>
           </div>
-          <input class="price-range" type="range" min="0" max="9000" step="100" value="7000">
+          <div class="range-scale">
+            <div class="range-bar" style="left: 0; width: 226px">
+              <button type="button" class="range-toggle toggle-min">
+                <span class="visually-hidden">Изменить минимальную цену</span>
+              </button>
+              <button type="button" class="range-toggle toggle-max">
+                <span class="visually-hidden">Изменить максимальную цену</span>
+              </button>
+            </div>
+          </div>
         </fieldset>
         <div class="filter-buttons">
           <button class="button button-submit" type="submit">Применить</button>
