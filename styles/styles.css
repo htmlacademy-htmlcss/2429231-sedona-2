@@ -84,6 +84,11 @@ body {
   width: 138px;
 }
 
+.logo-link:hover,
+.logo-link:active {
+  opacity: 0.5;
+}
+
 .logo-image {
   display: block;
   position: absolute;
@@ -109,6 +114,11 @@ body {
   color: #000000;
   text-align: center;
   text-decoration: none;
+}
+
+.navigation-link:hover,
+.navigation-link:active {
+  opacity: 0.5;
 }
 
 .navigation-link-current::after {
@@ -292,7 +302,7 @@ body {
   content: "";
   position: absolute;
   width: 60px;
-  top: 86px;
+  bottom: -30px;
   left: 50%;
   margin-left: -30px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
@@ -1065,8 +1075,9 @@ body {
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
   position: absolute;
-  top: 5px;
-  left: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   width: 12px;
   height: 10px;
   background-image: url("../images/checked-tick.svg");
@@ -1075,8 +1086,9 @@ body {
 
 .control-input[type="radio"]:checked + .control-mark::before {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   width: 10px;
   height: 10px;
   background-color: #3F5E72;
