@@ -36,7 +36,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="button navigation-button" href="#">Хочу сюда</a>
+            <a class="button navigation-button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -152,6 +152,7 @@
               <div class="search-group">
                 <label class="search-label label-check-in" for="check-in-data">Дата Заезда:</label>
                 <input class="field search-field" id="check-in-data" name="check-in-data" type="text" value="27 апреля 2020" placeholder="Укажите дату" required>
+                <button type="button" class="button-calendar"></button>
               </div>
               <p class="warning check-in-warning">Мы не можем отправить вас в прошлое.</p>
             </div>
@@ -159,6 +160,7 @@
               <div class="search-group">
                 <label class="search-label label-check-out" for="check-out-data">Дата Выезда:</label>
                 <input class="field search-field" id="check-out-data" name="check-out-data" type="text" value="1 сентября 2023" placeholder="Укажите дату" required>
+                <button type="button" class="button-calendar"></button>
               </div>
               <p class="warning check-out-warning">На эти даты есть свободные номера. Пока есть.</p>
             </div>
@@ -166,12 +168,15 @@
             <div class="counter-group adults-counter">
               <label class="counter-label" for="adults-count">Взрослые:</label>
               <div class="input-group">
-                <input class="field adults-count-field" id="adults-count" type="number" name="adults-count" value="2" step="1" max="100">
-                <svg class="minus-icon" role="button" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M3 9v2h14V9H3Z"/></svg>
-                <svg class="plus-icon" role="button" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
+                <input class="field adults-count-field" id="adults-count" type="number" name="adults-count" value="2" step="1" max="100" required>
+                <button class="minus-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M3 9v2h14V9H3Z"/></svg>
+                </button>
+                <button class="plus-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
+                </button>
               </div>
             </div>
-
             <div class="counter-group children-counter">
               <span class="form-label">
                 <label class="counter-label" for="children-count">Дети:</label>
@@ -184,8 +189,12 @@
               </span>
               <div class="input-group">
                 <input class="field children-count-field" id="children-count" type="number" name="children-count" value="2" step="1" max="100">
-                <svg class="minus-icon" role="button" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M3 9v2h14V9H3Z"/></svg>
-                <svg class="plus-icon" role="button" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
+                <button class="minus-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M3 9v2h14V9H3Z"/></svg>
+                </button>
+                <button class="plus-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg>
+                </button>
               </div>
             </div>
           </div>

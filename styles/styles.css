@@ -209,7 +209,7 @@ body {
   background-size: 100% auto, cover;
   background-repeat: no-repeat;
   background-position: left bottom, left top;
-  background-color: #d19cdb;
+  background-color: #84929e;
 }
 
 .hero-image {
@@ -219,7 +219,7 @@ body {
 }
 
 .advantages-title {
-  width: 620px;
+  width: 627px;
   margin: 0 auto;
   margin-top: 69px;
   margin-bottom: 25px;
@@ -230,7 +230,7 @@ body {
 }
 
 .advantages-reasons {
-  width: 651px;
+  min-width: 651px;
   margin: 0 auto;
   margin-bottom: 90px;
   font-size: 22px;
@@ -457,11 +457,11 @@ body {
   background-image: url("../images/newsletter-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #d19cdb;
+  background-color: #84929e;
 }
 
 .newsletter h2 {
-  width: 404px;
+  min-width: 404px;
   margin: 0 auto;
   margin-bottom: 20px;
   font-size: 30px;
@@ -492,6 +492,7 @@ body {
   margin: 0;
   padding: 14px 20px;
   font-family: inherit;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0);
@@ -589,7 +590,7 @@ body {
   display: block;
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 331px;
+  min-width: 331px;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
@@ -707,6 +708,7 @@ body {
   width: 577px;
   height: 48px;
   margin-bottom: 4px;
+  position: relative;
 }
 
 .search-label {
@@ -730,11 +732,21 @@ body {
 .search-field {
   width: 440px;
   padding: 12px 20px;
-  font-weight: 700;
   border-radius: 4px;
+}
+
+.button-calendar {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  background-color: transparent;
+  border: none;
   background-image: url("../images/calendar.svg");
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  cursor: pointer;
 }
 
 .warning {
@@ -816,7 +828,8 @@ body {
 
 .tooltip-text {
   width: 256px;
-  padding: 15px 18px 18px 22px;
+  height: 143px;
+  padding: 19px 18px 18px 22px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -857,9 +870,10 @@ body {
   width: 110px;
   text-align: center;
   padding: 14px 40px;
-  font-weight: 700;
   line-height: 20px;
   border-radius: 4px;
+  -moz-appearance: textfield;
+      appearance: textfield;
 }
 
 .children-count-field {
@@ -881,36 +895,56 @@ body {
 
 .minus-icon {
   position: absolute;
+  padding: 0;
+  width: 20px;
+  height: 20px;
   top: 50%;
   transform: translateY(-50%);
   left: 10px;
-  fill: rgba(117, 97, 87, 0.3);
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+}
+
+.minus-icon svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .plus-icon {
   position: absolute;
+  padding: 0;
+  width: 20px;
+  height: 20px;
   top: 50%;
   transform: translateY(-50%);
   right: 10px;
-  fill: rgba(117, 97, 87, 0.3);
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 
-.minus-icon:hover,
-.plus-icon:hover {
+.plus-icon svg {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.minus-icon:hover svg,
+.plus-icon:hover svg {
   fill: #000000;
 }
 
 .minus-icon:focus,
 .plus-icon:focus {
-  fill: #000000;
   outline: 3px solid #82B3D3;
   border-radius: 4px;
 }
 
-.minus-icon:active,
-.plus-icon:active {
+.minus-icon:focus svg,
+.plus-icon:focus svg {
+  fill: #000000;
+}
+
+.minus-icon:active svg,
+.plus-icon:active svg {
   fill: rgba(0, 0, 0, 0.2);
 }
 
@@ -941,7 +975,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
-  background-color: #d19cdb;
+  background-color: #84929e;
 }
 
 .catalog-container {
@@ -980,7 +1014,7 @@ body {
   width: 8px;
   height: 20px;
   top: 0;
-  left: 23px;
+  left: calc(100% + 11px);
   background-image: url("../images/arrow.svg");
 }
 
@@ -1068,8 +1102,7 @@ body {
 .control:active .control-label {
   opacity: 0.3;
 }
-
-.control:focus .control-mark {
+.control-input:focus + span {
   outline: 3px solid #83B3D3;
 }
 
@@ -1157,8 +1190,9 @@ body {
   padding: 12px 20px;
   width: 143px;
   height: 48px;
-  font-weight: 700;
   color: #000000;
+  -moz-appearance: textfield;
+      appearance: textfield;
 }
 
 .range-input:focus {
@@ -1372,8 +1406,8 @@ body {
   grid-template-rows: 1fr;
   gap: 16px 20px;
   padding: 20px;
-  border: 1px solid #E5E5E5;
   border-radius: 4px;
+  box-shadow: 0 0 1px 1px #E5E5E5;
 }
 
 .card-link {
@@ -1490,7 +1524,7 @@ body {
 }
 
 .star-4::before {
-  width: 90px;
+  width: 89px;
 }
 
 .card-rating {
@@ -1582,18 +1616,20 @@ body {
 }
 
 .pagination-more span {
-  min-width: 17px;
+  min-width: 30px;
   min-height: 26px;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .newsletter-inner {
   width: 1200px;
-  padding: 90px 258px 104px;
+  padding: 91px 258px 104px;
   background-color: #ffffff;
 }
 
 .newsletter-inner h2 {
-  width: 404px;
+  min-width: 404px;
   margin: 0 auto;
   margin-bottom: 20px;
   font-size: 30px;
