@@ -492,7 +492,6 @@ body {
   margin: 0;
   padding: 14px 20px;
   font-family: inherit;
-  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0);
@@ -639,9 +638,9 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
 
 .modal {
   position: relative;
@@ -733,6 +732,7 @@ body {
   width: 440px;
   padding: 12px 20px;
   border-radius: 4px;
+  font-weight: 700;
 }
 
 .button-calendar {
@@ -868,6 +868,7 @@ body {
 .adults-count-field,
 .children-count-field {
   width: 110px;
+  font-weight: 700;
   text-align: center;
   padding: 14px 40px;
   line-height: 20px;
@@ -1190,6 +1191,7 @@ body {
   padding: 12px 20px;
   width: 143px;
   height: 48px;
+  font-weight: 700;
   color: #000000;
   -moz-appearance: textfield;
       appearance: textfield;
