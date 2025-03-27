@@ -97,7 +97,7 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -150,6 +150,7 @@ body {
 
 .navigation-user {
   justify-content: flex-end;
+  align-items: flex-start;
   max-width: 320px;
   margin-left: auto;
 }
@@ -174,6 +175,11 @@ body {
   position: relative;
   top: -9px;
   left: 4px;
+}
+
+.navigation-item-button {
+  height: 64px;
+  padding: 14px 0;
 }
 
 .navigation-button {
@@ -257,11 +263,11 @@ body {
   padding: 113px 85px;
 }
 
-.advantages-light {
-  background-color: rgba(131, 179, 211, 0.12);
+.little-item {
+  background-color: rgba(131, 179, 211, 0.12)
 }
 
-.advantages-medium {
+.little-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
@@ -492,7 +498,6 @@ body {
   margin: 0;
   padding: 14px 20px;
   font-family: inherit;
-  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0);
@@ -590,7 +595,7 @@ body {
   display: block;
   padding-top: 5px;
   padding-bottom: 5px;
-  min-width: 331px;
+  width: 333px;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
@@ -733,6 +738,7 @@ body {
   width: 440px;
   padding: 12px 20px;
   border-radius: 4px;
+  font-weight: 700;
 }
 
 .button-calendar {
@@ -868,6 +874,7 @@ body {
 .adults-count-field,
 .children-count-field {
   width: 110px;
+  font-weight: 700;
   text-align: center;
   padding: 14px 40px;
   line-height: 20px;
@@ -1190,6 +1197,7 @@ body {
   padding: 12px 20px;
   width: 143px;
   height: 48px;
+  font-weight: 700;
   color: #000000;
   -moz-appearance: textfield;
       appearance: textfield;
